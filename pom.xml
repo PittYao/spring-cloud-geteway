@@ -59,6 +59,7 @@
 <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
 <!--            <version>0.9.0.RELEASE</version>-->
 <!--        </dependency>-->
+
         <!-- nacos 版本二 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

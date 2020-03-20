@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MygetwayApplication {
+public class MyGateWayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MygetwayApplication.class, args);
+        SpringApplication.run(MyGateWayApplication.class, args);
     }
 
 }

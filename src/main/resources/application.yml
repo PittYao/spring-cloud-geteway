@@ -16,11 +16,14 @@ spring:
         # 访问 http://localhost:8040/users/1 转发到 http://user-center/users/1
         - id: user_route
           uri: lb://user-center
+          # 过滤条件 满足url条件，满足请求头有Auth字段
           predicates:
-            # 过滤条件 满足url条件，满足请求头有Auth字段
             - Path=/users/**
             - Header=Auth
-
+          # 在请求转发时 对请求进行处理 （添加 X-Request-Foo 值为 Bar）NettyRoutingFilter 处理
+          filters:
+            - AddRequestHeader=X-Request-Foo, Bar
+            - PreLog=fan,yao
 management:
   endpoints:
     web:
