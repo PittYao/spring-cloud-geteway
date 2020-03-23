@@ -20,10 +20,14 @@ spring:
           predicates:
             - Path=/users/**
             - Header=Auth
-          # 在请求转发时 对请求进行处理 （添加 X-Request-Foo 值为 Bar）NettyRoutingFilter 处理
+          # 在请求转发时 对请求进行处理 NettyRoutingFilter为处理类
           filters:
+            # 添加 X-Request-Foo 值为 Bar
             - AddRequestHeader=X-Request-Foo, Bar
+            # PreLog 过滤器执行 传入 fan，yao参数
             - PreLog=fan,yao
+
+
 management:
   endpoints:
     web:
